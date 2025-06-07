@@ -18,7 +18,7 @@ my_dict['list'].append(18)
 my_dict['list'].pop(1)
 # print(my_dict['list'])
 
-my_dict['dict_new']['i am a tuple'] = 'crazy'
+my_dict['dict_new'][('i am a tuple',)] = 'crazy'
 # print(my_dict['dict_new'])
 
 my_dict['dict_new'].pop('car1')
