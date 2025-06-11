@@ -9,4 +9,3 @@ for number in numbers:
         print('Buzz')
     else:
         print(number)
-        

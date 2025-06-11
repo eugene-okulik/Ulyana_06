@@ -10,4 +10,3 @@ for word in words:
         print(word.replace(',', 'ing,'), end=' ')
     else:
         print(word + 'ing', end=' ')
-        
