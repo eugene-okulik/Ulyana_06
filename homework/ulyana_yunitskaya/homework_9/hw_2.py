@@ -2,7 +2,7 @@ temperatures = [20, 15, 32, 34, 21, 19, 25, 27, 30, 32, 34, 30, 29, 25, 27, 22, 
 
 new_form_2 = list(filter(lambda x: x>28, temperatures))
 
-print(list(new_form_2))  #hot days
-print(max(new_form_2))  #max temperature
-print(min(new_form_2))  #min temperature
-print(round(sum(new_form_2) / len(new_form_2), 2))  #average temperature
+print(list(new_form_2))
+print(max(new_form_2))
+print(min(new_form_2))
+print(round(sum(new_form_2) / len(new_form_2), 2))
