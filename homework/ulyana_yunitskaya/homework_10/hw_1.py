@@ -11,5 +11,5 @@ def finish_me(func):
 def example(text):
     print(text)
 
+
 example('look at me')
-example('that')

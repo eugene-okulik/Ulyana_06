@@ -11,4 +11,5 @@ def repeat_me(func):
 def example(text):
     print(text)
 
+
 example('look at me', count=6)
