@@ -11,11 +11,11 @@ class Book:
 
     def print_info(self):
         if self.reserved:
-            print(f'Name: {self.book_title}, Author: {self.author}, Pages: {
-                self.number_of_pages}, Material: {self.page_material}, reserved')
+            print(f'Name: {self.book_title}, Author: {self.author}, Pages: {self.number_of_pages}, '
+                  f'Material: {self.page_material}, reserved')
         else:
-            print(f'Name: {self.book_title}, Author: {self.author}, Pages: {
-                self.number_of_pages}, Material: {self.page_material}')
+            print(f'Name: {self.book_title}, Author: {self.author}, Pages: {self.number_of_pages}, '
+                  f'Material: {self.page_material}')
 
 
 book_one = Book('The Idiot', 'Dostoevsky', 500,
@@ -47,11 +47,11 @@ class SchoolBooks(Book):
 
     def info_tasks(self):
         if self.reserved:
-            print(f'Name: {self.book_title}, Author: {self.author}, Pages: {
-                self.number_of_pages}, Subject: {self.subject}, Shool_class: {self.school_class}, reserved')
+            print(f'Name: {self.book_title}, Author: {self.author}, Pages: {self.number_of_pages}, '
+                  f'Subject: {self.subject}, School_class: {self.school_class}, reserved')
         else:
-            print(f'Name: {self.book_title}, Author: {self.author}, Pages: {
-                self.number_of_pages}, Subject: {self.subject}, Shool_class: {self.school_class}')
+            print(f'Name: {self.book_title}, Author: {self.author}, Pages: {self.number_of_pages}, '
+                  f'Subject: {self.subject}, School_class: {self.school_class}')
 
 
 school_book_one = SchoolBooks('Algebra', 'Ivanov', 120, 6498,
