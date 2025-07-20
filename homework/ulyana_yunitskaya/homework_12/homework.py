@@ -9,15 +9,18 @@ class Flower:
         self.cost = cost
         self.life_time = life_time
 
+
 class Hibiscus(Flower):
     def __init__(self, freshness, color, stem_length, cost, life_time, smell):
         super().__init__(freshness, color, stem_length, cost, life_time)
         self.smell = smell
 
+
 class Rose(Flower):
     def __init__(self, freshness, color, stem_length, cost, life_time, thorns):
         super().__init__(freshness, color, stem_length, cost, life_time)
         self.thorns = thorns
+
 
 class Aster(Flower):
     def __init__(self, freshness, color, stem_length, cost, life_time, core):
@@ -31,6 +34,7 @@ flower_a = Aster(True, 'blue', 10, 7, 6, True)
 print(flower_h.cost)
 print(flower_r.color)
 print(flower_a.stem_length)
+
 
 class Bouquet:
     def __init__(self, flowers: list):
