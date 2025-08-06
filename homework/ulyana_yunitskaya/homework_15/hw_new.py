@@ -65,22 +65,22 @@ result2 = cursor.fetchall()
 print(result2)
 
 query = '''
-    SELECT 
-        s.id AS student_id,
-        s.name,
-        s.second_name,
-        g.title AS group_title,
-        b.title AS book_title,
-        m.value AS mark_value,
-        l.title AS lesson_title,
-        sub.title AS subject_title
-    FROM students s
-    LEFT JOIN `groups` g ON s.group_id = g.id
-    LEFT JOIN books b ON s.id = b.taken_by_student_id
-    LEFT JOIN marks m ON s.id = m.student_id
-    LEFT JOIN lessons l ON m.lesson_id = l.id
-    LEFT JOIN subjects sub ON l.subject_id = sub.id
-    WHERE s.id = %s
+SELECT 
+    s.id AS student_id,
+    s.name,
+    s.second_name,
+    g.title AS group_title,
+    b.title AS book_title,
+    m.value AS mark_value,
+    l.title AS lesson_title,
+    sub.title AS subject_title
+FROM students s
+LEFT JOIN `groups` g ON s.group_id = g.id
+LEFT JOIN books b ON s.id = b.taken_by_student_id
+LEFT JOIN marks m ON s.id = m.student_id
+LEFT JOIN lessons l ON m.lesson_id = l.id
+LEFT JOIN subjects sub ON l.subject_id = sub.id
+WHERE s.id = %s
 '''
 
 student_id = 20914
