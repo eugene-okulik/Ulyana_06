@@ -65,7 +65,7 @@ result2 = cursor.fetchall()
 print(result2)
 
 query = '''
-SELECT 
+SELECT
     s.id AS student_id,
     s.name,
     s.second_name,
