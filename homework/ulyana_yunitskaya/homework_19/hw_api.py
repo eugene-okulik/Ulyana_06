@@ -6,6 +6,7 @@ def one_post():
     response = requests.get(f'http://objapi.course.qa-practice.com/object/{post_id}').json()
     assert response['id'] == post_id
 
+
 def new_post():
     body = {
         "data":
@@ -23,6 +24,7 @@ def new_post():
     )
     return response.json()['id']
 
+
 def put_a_post():
     post_id = new_post()
     body = {
@@ -39,10 +41,12 @@ def put_a_post():
         json=body,
         headers=headers
     ).json()
-    assert response['data']['color']=='pink'
+    assert response['data']['color'] == 'pink'
     assert response['data']['size'] == 'small'
 
+
 put_a_post()
+
 
 def patch_a_post():
     post_id = new_post()
@@ -58,9 +62,11 @@ def patch_a_post():
         json=body,
         headers=headers
     ).json()
-    assert response['data']['color']=='green'
+    assert response['data']['color'] == 'green'
+
 
 patch_a_post()
+
 
 def delete_a_post():
     post_id = new_post()
