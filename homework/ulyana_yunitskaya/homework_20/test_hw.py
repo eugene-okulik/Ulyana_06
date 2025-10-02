@@ -2,14 +2,14 @@ import requests
 import pytest
 
 
-@pytest.fixture(scope='session')
+@pytest.fixture(scope='session', autouse=True)
 def hello():
     print('Start testing')
     yield
     print('Testing completed')
 
 
-@pytest.fixture()
+@pytest.fixture(autouse=True)
 def say_test():
     print('before test')
     yield
