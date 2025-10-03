@@ -36,11 +36,34 @@ def play_yield():
     requests.delete(f'http://objapi.course.qa-practice.com/object/{obj_id}')
 
 
-@pytest.mark.parametrize('name', ['^&*', 'P', ' '])
+@pytest.mark.parametrize("name", ["^&*", "P", " "])
 @pytest.mark.medium
-def test_one_obj(play_yield, name):
-    response = requests.get(f'http://objapi.course.qa-practice.com/object/{play_yield}').json()
-    assert response['id'] == play_yield
+def test_create_object(name):
+    body = {
+        "data": {
+            "color": "blue",
+            "size": "biggest"
+        },
+        "name": name
+    }
+    headers = {"Content-Type": "application/json"}
+    response = requests.post(
+        "http://objapi.course.qa-practice.com/object",
+        json=body,
+        headers=headers
+    )
+    obj = response.json()
+    assert response.status_code == 200
+    assert obj["name"] == name
+    requests.delete(f"http://objapi.course.qa-practice.com/object/{obj['id']}")
+
+
+
+def test_get_object(play_yield):
+    response = requests.get(f"http://objapi.course.qa-practice.com/object/{play_yield}")
+    obj = response.json()
+    assert response.status_code == 200
+    assert obj["id"] == play_yield
 
 
 @pytest.mark.critical
