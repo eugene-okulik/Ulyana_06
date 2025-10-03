@@ -58,7 +58,6 @@ def test_create_object(name):
     requests.delete(f"http://objapi.course.qa-practice.com/object/{obj['id']}")
 
 
-
 def test_get_object(play_yield):
     response = requests.get(f"http://objapi.course.qa-practice.com/object/{play_yield}")
     obj = response.json()
