@@ -1,6 +1,7 @@
 from locust import HttpUser, task, between
 import random
 
+
 class ObjectUser(HttpUser):
 
     @task(2)
