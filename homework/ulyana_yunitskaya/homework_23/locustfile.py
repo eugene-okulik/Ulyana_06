@@ -1,20 +1,16 @@
 from locust import HttpUser, task, between
 import random
 
-
 class ObjectUser(HttpUser):
-
 
     @task(2)
     def get_all_objects(self):
         self.client.get("/object")
 
-
     @task(1)
     def get_one_object(self):
         obj_id = random.choice([3691, 3696, 3703])
         self.client.get(f"/object/{obj_id}")
-
 
     @task(3)
     def create_object(self):
