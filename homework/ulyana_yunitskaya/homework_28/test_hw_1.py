@@ -7,4 +7,3 @@ def test_form_authentication(page: Page):
     page.get_by_role('textbox', name='Username').fill('Ulyana')
     page.get_by_role('textbox', name='Password').fill('123456')
     page.get_by_role('button', name='Login').click()
-
