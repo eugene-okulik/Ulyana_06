@@ -3,7 +3,6 @@ from playwright.sync_api import Page, expect, Route
 
 def test_iphone(page: Page):
 
-
     def handle_response(route: Route):
         response = route.fetch()
         text = response.text()
