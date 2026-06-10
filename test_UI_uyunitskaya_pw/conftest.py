@@ -13,17 +13,20 @@ def page():
         yield page
         browser.close()
 
+
 @pytest.fixture()
 def cart_page(page):
     page_obj = CartPage(page)
     page_obj.open_page()
     return page_obj
 
+
 @pytest.fixture()
 def category_page(page):
     page_obj = CategoryPage(page)
     page_obj.open_page()
     return page_obj
+
 
 @pytest.fixture()
 def product_page(page):
