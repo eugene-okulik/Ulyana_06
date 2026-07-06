@@ -1,0 +1,22 @@
+Задание 1, часть 2
+Go to first line in file: g  <  ESC-<
+Go to last line in file: G  >  ESC->
+Forward one window: f  ^F  ^V  SPACE
+Forward one line:  e  ^E  j  ^N  CR
+Backward one line:  y  ^Y  k  ^K  ^P
+Search forward for matching line: /pattern
+Search backward for matching line: ?pattern
+Repeat previous search: n
+Repeat previous search in reverse direction:N
+
+
+Задание 2
+/dev/null - character special file (символьное специальное устройство)
+/dev/zero - character special file (символьное специальное устройство)
+/dev/sda - No such file or directory
+/dev/tty - character special file (символьное специальное устройство)
+/root - directory (каталог)
+/etc/passwd - regular file (обычный файл)
+/proc/mounts - symbolic link (символическая ссылка)
+/bin/ls - regular file (обычный файл)
+/bin/zcat - regular file (обычный файл)
